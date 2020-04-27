@@ -1,35 +1,85 @@
 <template>
   <div class="hello">
     <Navbar></Navbar>
-    <ul class="homelist">
-      <li>პროცესორი (CPU) <button>ამოირჩიე</button></li>
-      <li>ვიდეო ბარათი (GPU) <button>ამოირჩიე</button></li>
-      <li>დედაბარათი (Motherboard) <button>ამოირჩიე</button></li>
-      <li>მყარი დისკი (HDD) <button>ამოირჩიე</button></li>
-      <li>ოპერატიული მეხსიერება (RAM) <button>ამოირჩიე</button></li>
+    <ul class="homelist" v-if="pcParts">
+      <li>
+        პროცესორი (CPU)
+        <button @click="cpuchecked = !cpuchecked">ამოირჩიე</button>
+      </li>
+      <div v-if="cpuchecked">
+        <Cpus :cpuList="pcParts.cpus" :cpuLabels="translations.listItem.cpu"></Cpus>
+      </div>
+      <li>
+        ვიდეო ბარათი (GPU)
+        <button @click="gpuchecked = !gpuchecked">ამოირჩიე</button>
+      </li>
+      <div v-if="gpuchecked">
+        <Gpus :gpuList="pcParts.gpus" :gpuLabels="translations.listItem.gpu"></Gpus>
+      </div>
+      <li>
+        დედაბარათი (Motherboard)
+        <button @click="mboardschecked = !mboardschecked">ამოირჩიე</button>
+      </li>
+      <div v-if="mboardschecked">
+        <Mboards :mboardList="pcParts.mboards" :mboardLabels="translations.listItem.mboard"></Mboards>
+      </div>
+      <li>
+        მყარი დისკი (HDD)
+        <button @click="hddchecked = !hddchecked">ამოირჩიე</button>
+      </li>
+      <div v-if="hddchecked">
+        <Hdds :hddList="pcParts.hdds" :hddLabels="translations.listItem.hdd"></Hdds>
+      </div>
+      <li>
+        ოპერატიული მეხსიერება (RAM)
+        <button @click="ramchecked = !ramchecked">ამოირჩიე</button>
+      </li>
+      <div v-if="ramchecked">
+        <Rams :ramList="pcParts.rams" :ramLabels="translations.listItem.ram"></Rams>
+      </div>
     </ul>
   </div>
 </template>
 
 <script>
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+import Hdds from "./Hdds";
+import Gpus from "./Gpus";
+import Cpus from "./Cpus";
+import Mboards from "./Mboards";
+import Rams from "./Rams";
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String,
+    msg: String
   },
   components: {
     Navbar,
+    Hdds,
+    Gpus,
+    Cpus,
+    Mboards,
+    Rams
   },
   data: function() {
     return {
-      showCpus: false,
-      showGpus: false,
-      showMboard: false,
-      showHdd: false,
-      showRam: false,
+      cpuchecked: false,
+      gpuchecked: false,
+      mboardschecked: false,
+      hddchecked: false,
+      ramchecked: false,
+      pcParts: null,
+      translations: null
     };
   },
+  mounted: function() {
+    fetch("http://localhost:3000/pcparts")
+      .then(res => res.json())
+      .then(json => (this.pcParts = json[0]));
+    fetch("http://localhost:3000/translations")
+      .then(res => res.json())
+      .then(json => (this.translations = json));
+  }
 };
 </script>
 
@@ -43,7 +93,7 @@ export default {
   --tertiary: rgb(134, 222, 183);
 }
 * {
-  font-family: 'BPG Glaho WEB Caps', sans-serif;
+  font-family: "BPG Glaho WEB Caps", sans-serif;
 }
 h3 {
   margin: 40px 0 0;

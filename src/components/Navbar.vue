@@ -1,20 +1,32 @@
 <template>
   <div class="nav">
     <div class="logo">
-      <a href="/"><i class="fas fa-home"></i></a>
+      <a href="/">
+        <i class="fas fa-home"></i>
+      </a>
     </div>
     <ul class="menu">
-      <a href="/build-a-pc"><li>კომპიუტერის აწყობა</li></a>
-      <a href="/ready-builds"><li>აწყობილი სისტემები</li></a>
-      <a href="/faq"><li>ხშირად დასმ. კითხვები</li></a>
-      <a href="contact-us"><li>კონტაქტი</li></a>
+      <a href="/build-a-pc">
+        <li>კომპიუტერის აწყობა</li>
+      </a>
+      <a href="/ready-builds">
+        <li>აწყობილი სისტემები</li>
+      </a>
+      <a href="/faq">
+        <li>ხშირად დასმ. კითხვები</li>
+      </a>
+      <a href="contact-us">
+        <li>კონტაქტი</li>
+      </a>
     </ul>
   </div>
 </template>
 <script>
 export default {
-  name: 'Navbar',
-  data: function() {},
+  name: "Navbar",
+  data: function() {
+    return {};
+  }
 };
 </script>
 <style>

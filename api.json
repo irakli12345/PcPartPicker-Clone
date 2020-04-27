@@ -1,0 +1,264 @@
+{
+  "pcparts": [
+    {
+      "hdds": [
+        {
+          "brand": "Seagate",
+          "name": "Barracuda Compute",
+          "capacityInGbs": 1024,
+          "type": "SSD",
+          "RPM": null,
+          "key": "fds"
+        },
+        {
+          "brand": "Samsung",
+          "name": "970 Evo",
+          "capacityInGbs": 500,
+          "type": "SSD",
+          "RPM": null
+        },
+        {
+          "brand": "Western Digital",
+          "name": "Caviar Blue",
+          "capacityInGbs": 1024,
+          "type": "",
+          "RPM": 7200
+        },
+        {
+          "brand": "Western Digital",
+          "name": "Blue",
+          "capacityInGbs": 500,
+          "type": "SSD",
+          "RPM": null
+        },
+        {
+          "brand": "Seagate",
+          "name": "Barracuda",
+          "capacityInGbs": 1024,
+          "type": "",
+          "RPM": 7200
+        },
+        {
+          "brand": "Samsung",
+          "name": "860 QVO",
+          "capacityInGbs": 1024,
+          "type": "SSD",
+          "RPM": null
+        }
+      ],
+      "cpus": [
+        {
+          "brand": "Intel",
+          "series": "i5 8400",
+          "core count": 6,
+          "socket": "1151",
+          "TDP": 80,
+          "integrated-graphics": "Intel UHD Graphics 630",
+          "price": 400
+        },
+        {
+          "brand": "Intel",
+          "series": "G4400",
+          "core count": 2,
+          "socket": "1151",
+          "TDP": 55,
+          "integrated-graphics": "Intel HD Graphics 510",
+          "price": 200
+        },
+        {
+          "brand": "Intel",
+          "series": "G4900",
+          "core count": 2,
+          "socket": "1151.2",
+          "TDP": 55,
+          "integrated-graphics": "Intel UHD Graphics 610",
+          "price": 200
+        },
+        {
+          "brand": "Intel",
+          "series": "i7-9700KF",
+          "core count": 8,
+          "socket": "1151.2",
+          "TDP": 95,
+          "integrated-graphics": null,
+          "price": 600
+        },
+        {
+          "brand": "AMD",
+          "series": "FX4300",
+          "core count": 4,
+          "socket": "AM3+",
+          "TDP": 95,
+          "integrated-graphics": null,
+          "price": 100
+        },
+        {
+          "brand": "Intel",
+          "series": "I9-9900K",
+          "core count": 8,
+          "socket": "1151-2",
+          "TDP": 95,
+          "integrated-graphics": "Intel UHD Graphics 630",
+          "price": 1600
+        }
+      ],
+      "gpus": [
+        {
+          "brand": "Gigabyte",
+          "name": "WINDFORCE OC 3X",
+          "chipset": "GeForce RTX 2070 SUPER",
+          "memoryInGbs": 8,
+          "price": 1200,
+          "maxTDP": 350
+        },
+        {
+          "brand": "MSI",
+          "name": "VENTUS XS OC",
+          "chipset": "GeForce RTX 2060",
+          "memoryInGbs": 6,
+          "price": 800,
+          "maxTDP": 200
+        },
+        {
+          "brand": "XFX",
+          "name": "GTS XXX ED",
+          "chipset": "Radeon RX 580",
+          "memoryInGbs": 8,
+          "price": 450,
+          "maxTDP": 200
+        },
+        {
+          "brand": "EVGA",
+          "name": "BLACK GAMING",
+          "chipset": "GeForce RTX 2070 SUPER",
+          "memoryInGbs": 8,
+          "price": 1500,
+          "maxTDP": 400
+        },
+        {
+          "brand": "Sapphire",
+          "name": "PULSE",
+          "chipset": "Radeon RX 5700 XT",
+          "memoryInGbs": 8,
+          "price": 1000,
+          "maxTDP": 250
+        }
+      ],
+      "mboards": [
+        {
+          "brand": "Asus",
+          "name": "ROG STRIX Z390-E GAMING",
+          "maxRam": 128,
+          "ramSlots": 4,
+          "socket": "1151",
+          "price": 500
+        },
+        {
+          "brand": "MSI",
+          "name": "B360 GAMING PLUS",
+          "maxRam": 64,
+          "ramSlots": 4,
+          "socket": "1151",
+          "price": 300
+        },
+        {
+          "brand": "Gigabyte",
+          "name": "GA-78LMT-USB3",
+          "maxRam": 32,
+          "ramSlots": 4,
+          "socket": "AM3+",
+          "price": 900
+        },
+        {
+          "brand": "MSI",
+          "name": "MEG Z390 ACE",
+          "maxRam": 128,
+          "ramSlots": 4,
+          "socket": "1151",
+          "price": 900
+        },
+        {
+          "brand": "MSI",
+          "name": "H310M PRO-M2 PLUS",
+          "maxRam": 32,
+          "ramSlots": 2,
+          "socket": "1151",
+          "price": 150
+        }
+      ],
+      "rams": [
+        {
+          "Brand": "Corsair",
+          "Name": "Vengeance LPX 16 GB",
+          "Speed": "DDR4-3000",
+          "capacityInGbs": 16,
+          "capacityOfEach": 8
+        },
+        {
+          "Brand": "G.Skill",
+          "Name": "Ripjaws V 16 GB",
+          "Speed": "DDR4-3600",
+          "capacityInGbs": 16,
+          "capacityOfEach": 8
+        },
+        {
+          "Brand": "G.Skill",
+          "Name": "Trident Z RGB 16 GB",
+          "Speed": "DDR4-3600",
+          "capacityInGbs": 16,
+          "capacityOfEach": 8
+        },
+        {
+          "Brand": "Corsair",
+          "Name": "Vengeance LPX 32 GB",
+          "Speed": "DDR4-3000",
+          "capacityInGbs": 32,
+          "capacityOfEach": 16
+        },
+        {
+          "Brand": "Patriot",
+          "Name": "Viper 4 Blackout 8 GB",
+          "Speed": "DDR4-3000",
+          "capacityInGbs": 8,
+          "capacityOfEach": 4
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "listItem": {
+      "gpu": [
+        { "ge": "ბრენდი და ჩიპსეტი", "en": "Brand and Chipset" },
+        { "ge": "მახსოვრობა", "en": "Memory" },
+        { "ge": "ფასი", "en": "Price" }
+      ],
+      "hdd": [
+        { "ge": "სერია", "en": "Series" },
+        { "ge": "მოცულობა", "en": "Capacity" },
+        { "ge": "ტიპი", "en": "Type" }
+      ],
+      "cpu": [
+        { "ge": "სერია", "en": "series" },
+        { "ge": "ბირთვების რაოდენობა", "en": "Core Count" },
+        { "ge": "ინტეგრირებული ვიდეოდაფა", "en": "Integrated Graphics" },
+        { "ge": "სოკეტი", "en": "Socket" },
+        { "ge": "ფასი", "en": "Price" }
+      ],
+      "mboard": [
+        { "ge": "სერია", "en": "Series" },
+        { "ge": "ოპერატიული მეხს. ტევადობა", "en": "Ram Capacity" },
+        { "ge": "ოპერატიული მეხს. სლოტები", "en": "Ram Slots" },
+        { "ge": "სოკეტი", "en": "Socket" },
+        { "ge": "ფასი", "en": "Price" }
+      ],
+      "ram": [
+        { "ge": "სერია", "en": "Series" },
+        { "ge": "ფასი", "en": "Price" },
+        { "ge": "სისწრაფე", "en": "Speed" },
+        { "ge": "სულ მახსოვრობა", "en": "Total Memory" },
+        { "ge": "თითოს მახსოვრობა", "en": "Memory of Each" },
+        { "ge": "რაოდენობა", "en": "Quantity" }
+      ]
+    }
+  }
+}
