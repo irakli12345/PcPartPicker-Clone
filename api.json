@@ -189,38 +189,43 @@
       "rams": [
         {
           "Brand": "Corsair",
-          "Name": "Vengeance LPX 16 GB",
+          "Name": "Vengeance LPX",
           "Speed": "DDR4-3000",
           "capacityInGbs": 16,
-          "capacityOfEach": 8
+          "capacityOfEach": 8,
+          "price": 350
         },
         {
           "Brand": "G.Skill",
-          "Name": "Ripjaws V 16 GB",
+          "Name": "Ripjaws V",
           "Speed": "DDR4-3600",
           "capacityInGbs": 16,
-          "capacityOfEach": 8
+          "capacityOfEach": 8,
+          "price": 400
         },
         {
           "Brand": "G.Skill",
-          "Name": "Trident Z RGB 16 GB",
+          "Name": "Trident Z RGB",
           "Speed": "DDR4-3600",
           "capacityInGbs": 16,
-          "capacityOfEach": 8
+          "capacityOfEach": 8,
+          "price": 450
         },
         {
           "Brand": "Corsair",
-          "Name": "Vengeance LPX 32 GB",
+          "Name": "Vengeance LPX",
           "Speed": "DDR4-3000",
           "capacityInGbs": 32,
-          "capacityOfEach": 16
+          "capacityOfEach": 16,
+          "price": 600
         },
         {
           "Brand": "Patriot",
-          "Name": "Viper 4 Blackout 8 GB",
+          "Name": "Viper 4 Blackout",
           "Speed": "DDR4-3000",
           "capacityInGbs": 8,
-          "capacityOfEach": 4
+          "capacityOfEach": 4,
+          "price": 150
         }
       ]
     }
@@ -253,11 +258,10 @@
       ],
       "ram": [
         { "ge": "სერია", "en": "Series" },
-        { "ge": "ფასი", "en": "Price" },
         { "ge": "სისწრაფე", "en": "Speed" },
         { "ge": "სულ მახსოვრობა", "en": "Total Memory" },
         { "ge": "თითოს მახსოვრობა", "en": "Memory of Each" },
-        { "ge": "რაოდენობა", "en": "Quantity" }
+        { "ge": "ფასი", "en": "Price" }
       ]
     }
   }
