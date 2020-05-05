@@ -5,7 +5,9 @@
       :key="getHddKey(hdd)"
       :translations="hddLabels"
       :pcPartData="hdd"
-    >{{ hdd.brand + ' ' + hdd.name }}</Listitem>
+      @selected="handleSelected(hdd[0])"
+      :selectedItem="selectedHdd"
+    ></Listitem>
   </div>
 </template>
 <script>
@@ -17,7 +19,8 @@ export default {
   },
   props: {
     hddList: Array,
-    hddLabels: Array
+    hddLabels: Array,
+    selectedHdd: String
   },
   data: function() {
     return {};
@@ -25,6 +28,9 @@ export default {
   methods: {
     getHddKey: function(hdd) {
       return hdd.brand + hdd.name + Math.floor(Math.random() * 1000);
+    },
+    handleSelected: function(hddName) {
+      this.$emit("selected", hddName);
     }
   },
   computed: {

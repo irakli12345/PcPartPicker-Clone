@@ -5,6 +5,8 @@
       :pcPartData="cpu"
       :key="getCpuKey(cpu)"
       :translations="cpuLabels"
+      @selected="displaySelected(cpu[0])"
+      :selectedItem="selectedCpu"
     ></Listitem>
   </div>
 </template>
@@ -14,7 +16,8 @@ export default {
   name: "Cpus",
   props: {
     cpuList: Array,
-    cpuLabels: Array
+    cpuLabels: Array,
+    selectedCpu: String
   },
   components: {
     Listitem
@@ -25,6 +28,9 @@ export default {
   methods: {
     getCpuKey: function(cpu) {
       return cpu.brand + " " + Math.floor(Math.random() * 1000);
+    },
+    displaySelected: function(cpuName) {
+      this.$emit("selected", cpuName);
     }
   },
   computed: {

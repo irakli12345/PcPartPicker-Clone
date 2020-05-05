@@ -5,6 +5,8 @@
       :key="getRamKey(ram)"
       :pcPartData="ram"
       :translations="ramLabels"
+      @selected="handleSelected(ram[0])"
+      :selectedItem="selectedRam"
     ></Listitem>
   </div>
 </template>
@@ -17,7 +19,8 @@ export default {
   },
   props: {
     ramList: Array,
-    ramLabels: Array
+    ramLabels: Array,
+    selectedRam: String
   },
   data: function() {
     return { language: "ge" };
@@ -25,6 +28,9 @@ export default {
   methods: {
     getRamKey: function(ram) {
       return ram.Brand + ram.Name + Math.floor(Math.random() * 1000);
+    },
+    handleSelected: function(ramName) {
+      this.$emit("selected", ramName);
     }
   },
   computed: {

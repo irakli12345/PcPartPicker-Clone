@@ -11,10 +11,7 @@
       </div>
     </div>
     <div class="cartButton">
-      <span
-        :class="[addedToCart ? 'aroundCartAfterClick' : 'aroundCart']"
-        @click="addedToCart = !addedToCart"
-      >
+      <span :class="[addedToCart ? 'aroundCartAfterClick' : 'aroundCart']" @click="handleClick">
         <div :class="[addedToCart ? 'fa-shopping-cart-color' : '', 'wrapperDiv']">
           <i :class="[ 'fas', 'fa-shopping-cart']"></i>
         </div>
@@ -23,6 +20,7 @@
         <b>Selected</b>
       </p>
     </div>
+    <slot></slot>
   </div>
 </template>
 <script>
@@ -33,14 +31,26 @@ export default {
   },
   props: {
     pcPartData: Array,
-    translations: Array
+    translations: Array,
+    selectedItem: String
   },
   methods: {
-    getLabelKey: function(label) {
-      return label.en + Math.floor(Math.random() * 1000);
+    getLabelKey: function() {
+      return Math.floor(Math.random() * 1000);
     },
-    getPartKey: function(part) {
-      return part.length + Math.floor(Math.random() * 1000);
+    getPartKey: function() {
+      return Math.floor(Math.random() * 1000);
+    },
+    handleClick: function() {
+      this.addedToCart = !this.addedToCart;
+      this.$emit("selected");
+    }
+  },
+
+  mounted: function() {
+    console.log("it only runs this one time");
+    if (this.selectedItem == this.pcPartData[0]) {
+      this.addedToCart = true;
     }
   }
 };

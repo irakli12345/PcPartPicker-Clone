@@ -5,7 +5,9 @@
       :key="getGpuKey(gpu)"
       :translations="gpuLabels"
       :pcPartData="gpu"
-    >{{ gpu.brand + ' ' + gpu.name }}</Listitem>
+      @selected="displaySelected(gpu[0])"
+      :selectedItem="selectedGpu"
+    ></Listitem>
   </div>
 </template>
 <script>
@@ -20,13 +22,18 @@ export default {
   },
   props: {
     gpuList: Array,
-    gpuLabels: Array
+    gpuLabels: Array,
+    selectedGpu: String
   },
   methods: {
-    getGpuKey(gpu) {
-      return gpu.brand + gpu.name + Math.floor(Math.random() * 1000);
+    getGpuKey() {
+      return Math.floor(Math.random() * 1000);
+    },
+    displaySelected: function(gpuName) {
+      this.$emit("selected", gpuName);
     }
   },
+
   computed: {
     gpusMapped: function() {
       let arr = [];

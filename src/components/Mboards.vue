@@ -2,9 +2,11 @@
   <div>
     <Listitem
       v-for="mboard in mboardsMapped"
-      :key="generateMboardKey(mboard)"
+      :key="generateMboardKey(mboard[0])"
       :translations="mboardLabels"
       :pcPartData="mboard"
+      @selected="displaySelected(mboard[0])"
+      :selectedItem="selectedMboard"
     ></Listitem>
   </div>
 </template>
@@ -17,14 +19,18 @@ export default {
   },
   props: {
     mboardList: Array,
-    mboardLabels: Array
+    mboardLabels: Array,
+    selectedMboard: String
   },
   data: function() {
     return {};
   },
   methods: {
-    generateMboardKey: function(mboard) {
-      return mboard.brand + mboard.name + Math.floor(Math.random() * 1000);
+    generateMboardKey: function(mboardName) {
+      return mboardName + Math.floor(Math.random() * 1000);
+    },
+    displaySelected: function(mboardName) {
+      this.$emit("selected", mboardName);
     }
   },
   computed: {
