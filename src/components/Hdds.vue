@@ -1,5 +1,11 @@
 <template>
   <div>
+    <Filterlist
+      :suppliedList="hddList"
+      :orderOfFilter="orderOfFilter"
+      :filterTranslations="filterTranslations"
+      @filter="handleFilter"
+    ></Filterlist>
     <Listitem
       v-for="hdd in hddsMapped"
       :key="getHddKey(hdd)"
@@ -12,18 +18,23 @@
 </template>
 <script>
 import Listitem from "./Listitem";
+import Filterlist from "./Filterlist";
 export default {
   name: "Hdds",
   components: {
-    Listitem
+    Listitem,
+    Filterlist
   },
   props: {
     hddList: Array,
     hddLabels: Array,
-    selectedHdd: String
+    selectedHdd: String,
+    filterTranslations: Object
   },
   data: function() {
-    return {};
+    return {
+      orderOfFilter: ["brand", "capacityInGbs", "name", "type"]
+    };
   },
   methods: {
     getHddKey: function(hdd) {
@@ -31,6 +42,9 @@ export default {
     },
     handleSelected: function(hddName) {
       this.$emit("selected", hddName);
+    },
+    handleFilter: function(object) {
+      console.log(object);
     }
   },
   computed: {

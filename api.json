@@ -263,6 +263,52 @@
         { "ge": "თითოს მახსოვრობა", "en": "Memory of Each" },
         { "ge": "ფასი", "en": "Price" }
       ]
+    },
+    "filterLabels": {
+      "cpu": {
+        "series": { "en": "Series", "ge": "სერია" },
+        "brand": { "en": "Brand", "ge": "ბრენდი" },
+        "integrated-graphics": {
+          "en": "Integrated Graphics",
+          "ge": "ინტეგრირებული ვიდეოდაფა"
+        },
+        "socket": { "en": "Socket", "ge": "სოკეტი" },
+        "price": { "en": "Price", "ge": "ფასი" }
+      },
+      "gpu": {
+        "brand": { "en": "Brand", "ge": "ბრენდი" },
+        "chipset": { "en": "Chipset", "ge": "ჩიპსეტი" },
+        "memoryInGbs": {
+          "en": "Memory (in GBs)",
+          "ge": "მახსოვრობა (გეგაბაიტებში)"
+        },
+        "name": { "en": "GPU Name", "ge": "სახელი" },
+        "price": { "en": "Price", "ge": "ფასი" }
+      },
+      "mboard": {
+        "brand": { "en": "Brand", "ge": "ბრენდი" },
+        "maxRam": { "en": "Maximum Ram", "ge": "მაქს. ოპერატიული მეხს." },
+        "name": { "en": "Name", "ge": "სახელი" },
+        "price": { "en": "Price", "ge": "ფასი" },
+        "ramSlots": {
+          "en": "Ram Slots",
+          "ge": "სათავსო ოპერატიულისთვის"
+        },
+        "socket": { "en": "Socket", "ge": "სოკეტი" }
+      },
+      "hdd": {
+        "brand": { "en": "Brand", "ge": "ბრენდი" },
+        "capacityInGbs": { "en": "Capacity in GBs", "ge": "მეხსიერება GB-ში" },
+        "name": { "en": "Name", "ge": "სახელი" },
+        "type": { "en": "Type", "ge": "ტიპი" }
+      },
+      "ram": {
+        "Brand": { "en": "Brand", "ge": "ბრენდი" },
+        "Name": { "en": "Name", "ge": "სახელი" },
+        "Speed": { "en": "Speed", "ge": "სისწრაფე" },
+        "capacityInGbs": { "en": "Capacity in GBs", "ge": "მეხსიერება GB-ში" },
+        "price": { "en": "Price", "ge": "ფასი" }
+      }
     }
   }
 }

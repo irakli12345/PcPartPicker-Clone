@@ -1,5 +1,11 @@
 <template>
   <div>
+    <Filterlist
+      :suppliedList="ramList"
+      :orderOfFilter="orderOfFilter"
+      :filterTranslations="filterTranslations"
+      @filter="handleFilter"
+    ></Filterlist>
     <Listitem
       v-for="ram in ramsMapped"
       :key="getRamKey(ram)"
@@ -12,18 +18,24 @@
 </template>
 <script>
 import Listitem from "./Listitem";
+import Filterlist from "./Filterlist";
 export default {
   name: "Rams",
   components: {
-    Listitem
+    Listitem,
+    Filterlist
   },
   props: {
     ramList: Array,
     ramLabels: Array,
-    selectedRam: String
+    selectedRam: String,
+    filterTranslations: Object
   },
   data: function() {
-    return { language: "ge" };
+    return {
+      language: "ge",
+      orderOfFilter: ["Brand", "Name", "Speed", "capacityInGbs", "price"]
+    };
   },
   methods: {
     getRamKey: function(ram) {
@@ -31,6 +43,9 @@ export default {
     },
     handleSelected: function(ramName) {
       this.$emit("selected", ramName);
+    },
+    handleFilter: function(object) {
+      console.log(object);
     }
   },
   computed: {

@@ -5,7 +5,7 @@
       <li>
         პროცესორი (CPU)
         <button @click="cpuchecked = !cpuchecked">ამოირჩიე</button>
-        <b>{{addedPcParts.cpu}}</b>
+        <b>{{ addedPcParts.cpu }}</b>
         <button
           v-show="addedPcParts.cpu"
           @click="addedPcParts.cpu = ''"
@@ -18,12 +18,13 @@
           :cpuLabels="translations.listItem.cpu"
           @selected="handleCpuAddedToCart"
           :selectedCpu="addedPcParts.cpu"
+          :filterTranslations="translations.filterLabels.cpu"
         ></Cpus>
       </div>
       <li>
         ვიდეო ბარათი (GPU)
         <button @click="gpuchecked = !gpuchecked">ამოირჩიე</button>
-        <b>{{addedPcParts.gpu}}</b>
+        <b>{{ addedPcParts.gpu }}</b>
         <button
           v-show="addedPcParts.gpu"
           @click="addedPcParts.gpu = ''"
@@ -36,12 +37,13 @@
           :gpuLabels="translations.listItem.gpu"
           @selected="handleGpuAddedToCart"
           :selectedGpu="addedPcParts.gpu"
+          :filterTranslations="translations.filterLabels.gpu"
         ></Gpus>
       </div>
       <li>
         დედაბარათი (Motherboard)
         <button @click="mboardschecked = !mboardschecked">ამოირჩიე</button>
-        <b>{{addedPcParts.mboard}}</b>
+        <b>{{ addedPcParts.mboard }}</b>
         <button
           v-show="addedPcParts.mboard"
           @click="addedPcParts.mboard = ''"
@@ -54,12 +56,13 @@
           :mboardLabels="translations.listItem.mboard"
           @selected="handleMboardSelected"
           :selectedMboard="addedPcParts.mboard"
+          :filterTranslations="translations.filterLabels.mboard"
         ></Mboards>
       </div>
       <li>
         მყარი დისკი (HDD)
         <button @click="hddchecked = !hddchecked">ამოირჩიე</button>
-        <b>{{addedPcParts.hdd}}</b>
+        <b>{{ addedPcParts.hdd }}</b>
         <button
           v-show="addedPcParts.hdd"
           @click="addedPcParts.hdd = ''"
@@ -72,12 +75,13 @@
           :hddLabels="translations.listItem.hdd"
           @selected="handleHddSelected"
           :selectedHdd="addedPcParts.hdd"
+          :filterTranslations="translations.filterLabels.hdd"
         ></Hdds>
       </div>
       <li>
         ოპერატიული მეხსიერება (RAM)
         <button @click="ramchecked = !ramchecked">ამოირჩიე</button>
-        <b>{{addedPcParts.ram}}</b>
+        <b>{{ addedPcParts.ram }}</b>
         <button
           v-show="addedPcParts.ram"
           @click="addedPcParts.ram = ''"
@@ -90,6 +94,7 @@
           :ramLabels="translations.listItem.ram"
           @selected="handleRamSelected"
           :selectedRam="addedPcParts.ram"
+          :filterTranslations="translations.filterLabels.ram"
         ></Rams>
       </div>
     </ul>

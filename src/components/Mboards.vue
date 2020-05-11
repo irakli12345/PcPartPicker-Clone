@@ -1,5 +1,11 @@
 <template>
   <div>
+    <Filterlist
+      :suppliedList="mboardList"
+      :orderOfFilter="orderOfFilter"
+      :filterTranslations="filterTranslations"
+      @filter="handleFilter"
+    ></Filterlist>
     <Listitem
       v-for="mboard in mboardsMapped"
       :key="generateMboardKey(mboard[0])"
@@ -12,18 +18,23 @@
 </template>
 <script>
 import Listitem from "./Listitem";
+import Filterlist from "./Filterlist";
 export default {
   name: "Mboards",
   components: {
-    Listitem
+    Listitem,
+    Filterlist
   },
   props: {
     mboardList: Array,
     mboardLabels: Array,
-    selectedMboard: String
+    selectedMboard: String,
+    filterTranslations: Object
   },
   data: function() {
-    return {};
+    return {
+      orderOfFilter: ["brand", "maxRam", "name", "price", "ramSlots", "socket"]
+    };
   },
   methods: {
     generateMboardKey: function(mboardName) {
@@ -31,6 +42,9 @@ export default {
     },
     displaySelected: function(mboardName) {
       this.$emit("selected", mboardName);
+    },
+    handleFilter: function(object) {
+      console.log(object);
     }
   },
   computed: {

@@ -1,5 +1,11 @@
 <template>
   <div>
+    <Filterlist
+      :suppliedList="gpuList"
+      :orderOfFilter="orderOfFilter"
+      :filterTranslations="filterTranslations"
+      @filter="handleFilter"
+    ></Filterlist>
     <Listitem
       v-for="gpu in gpusMapped"
       :key="getGpuKey(gpu)"
@@ -12,18 +18,23 @@
 </template>
 <script>
 import Listitem from "./Listitem";
+import Filterlist from "./Filterlist"
 export default {
   name: "Gpus",
   data: function() {
-    return {};
+    return {
+      orderOfFilter: ["brand", "chipset", "memoryInGbs", "name", "price"]
+    };
   },
   components: {
-    Listitem
+    Listitem,
+    Filterlist
   },
   props: {
     gpuList: Array,
     gpuLabels: Array,
-    selectedGpu: String
+    selectedGpu: String,
+    filterTranslations: Object
   },
   methods: {
     getGpuKey() {
@@ -31,6 +42,9 @@ export default {
     },
     displaySelected: function(gpuName) {
       this.$emit("selected", gpuName);
+    },
+    handleFilter: function(object) {
+      console.log(object);
     }
   },
 

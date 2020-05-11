@@ -48,7 +48,6 @@ export default {
   },
 
   mounted: function() {
-    console.log("it only runs this one time");
     if (this.selectedItem == this.pcPartData[0]) {
       this.addedToCart = true;
     }
